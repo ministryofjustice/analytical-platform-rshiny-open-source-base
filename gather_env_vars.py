@@ -10,16 +10,16 @@ def gather_env_vars_to_renv_file():
     """
     Writes RENV files out.
     """
-    with open(
+    with open(  # pylint: disable=unspecified-encoding
         R_ENV_FILE_NAME, "a"
-    ) as file_handler:  # pylint: disable=unspecified-encoding
+    ) as file_handler:
         for name, value in os.environ.items():
             file_handler.write(f'{name}="{value}"')
             file_handler.write("\n")
 
-    with open(
+    with open(  # pylint: disable=unspecified-encoding
         R_ENV_FILE_NAME1, "a"
-    ) as file_handler:  # pylint: disable=unspecified-encoding
+    ) as file_handler:
         for name, value in os.environ.items():
             file_handler.write(f'{name}="{value}"')
             file_handler.write("\n")
