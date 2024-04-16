@@ -1,5 +1,5 @@
 {
-  "name": "analytical-platform-image-build-template",
+  "name": "analytical-platform-rshiny-open-source-base",
   "image": "ghcr.io/ministryofjustice/devcontainer-base:latest",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},

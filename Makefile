@@ -1,4 +1,4 @@
-IMAGE_NAME = ghcr.io/ministryofjustice/analytical-platform-image-build-template:latest
+IMAGE_NAME = ghcr.io/ministryofjustice/analytical-platform-rshiny-open-source-base:latest
 
 test: build
 	container-structure-test test --config test/container-structure-test.yml --image $(IMAGE_NAME)

@@ -26,13 +26,13 @@ jobs:
         with:
           push: false
           load: true
-          tags: analytical-platform-image-build-template
+          tags: analytical-platform-rshiny-open-source-base
 
       - name: Scan Image
         id: scan_image
         uses: aquasecurity/trivy-action@d710430a6722f083d3b36b8339ff66b32f22ee55 # v0.19.0
         with:
-          image-ref: analytical-platform-image-build-template
+          image-ref: analytical-platform-rshiny-open-source-base
           exit-code: 1
           format: sarif
           output: trivy-results.sarif
@@ -51,7 +51,7 @@ jobs:
         id: scan_image_on_failure
         uses: aquasecurity/trivy-action@d710430a6722f083d3b36b8339ff66b32f22ee55 # v0.19.0
         with:
-          image-ref: analytical-platform-image-build-template
+          image-ref: analytical-platform-rshiny-open-source-base
           exit-code: 1
           format: table
           severity: CRITICAL
