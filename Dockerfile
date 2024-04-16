@@ -1,3 +1,4 @@
+# checkov:skip=CKV_DOCKER_2:Healthcheck instructions have not been added to container images
 # hadolint global ignore=DL3008
 
 ARG r=4.3.2
