@@ -1,5 +1,5 @@
 IMAGE_NAME = ghcr.io/ministryofjustice/analytical-platform-rshiny-open-source-base:latest
-ARCH = $(shell uname -m)
+ARCH = $(shell uname --machine)
 
 define DOCKER_BUILD
 	@echo "Building on $(ARCH) architecture";
