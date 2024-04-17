@@ -4,4 +4,47 @@
 
 This repository is managed in Terraform [here](https://github.com/ministryofjustice/data-platform-github-access/blob/main/terraform/github/analytical-platform-repositories.tf).
 
-This source had no README.
+This repository contains the GitHub RShiny Open Source Base container image for use in the Analytical Platform.
+
+## Running Locally
+
+### Build
+
+```bash
+docker build --platform linux/amd64 --file Dockerfile --tag analytical-platform.service.justice.gov.uk/rshiny-open-source-base:local .
+```
+
+### Run
+
+```bash
+docker run -it --rm \
+  --platform linux/amd64 \
+  --name analytical-platform-rshiny-open-source-base \
+  --env GITHUB_TOKEN="XXX" \
+  --env GITHUB_REPOSITORY="ministryofjustice/analytical-platform" \
+  --env RUNNER_LABELS="YYY"
+  analytical-platform.service.justice.gov.uk/rshiny-open-source-base:local
+```
+## Versions
+
+### Ubuntu
+
+Generally Dependabot does this, but the following command will return the digest:
+
+```bash
+docker pull --platform linux/amd64 rocker/r-ver:{R_VERSION}
+
+docker image inspect --format='{{index .RepoDigests 0}}' rocker/r-ver:{R_VERSION}
+```
+
+### APT Packages
+
+To find latest APT package versions, you can run the following:
+
+```bash
+docker run -it --rm --platform linux/amd64 rocker/r-ver:{R_VERSION}
+
+apt-get update
+
+apt-cache policy ${PACKAGE} # for example curl, git or gpg
+```
