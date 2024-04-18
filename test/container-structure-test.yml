@@ -2,7 +2,7 @@
 schemaVersion: 2.0.0
 
 containerRunOptions:
-  user: "analyticalplatform"
+  user: "shiny"
 
 commandTests:
   - name: "ubuntu"
@@ -12,14 +12,14 @@ commandTests:
 
   - name: "whoami"
     command: "whoami"
-    expectedOutput: ["analyticalplatform"]
+    expectedOutput: ["shiny"]
 
   - name: "user"
     command: "id"
-    args: ["--user", "analyticalplatform"]
-    expectedOutput: ["1000"]
+    args: ["--user", "shiny"]
+    expectedOutput: ["998"]
 
   - name: "groups"
     command: "id"
-    args: ["--groups", "analyticalplatform"]
-    expectedOutput: ["100"]
+    args: ["--groups", "shiny"]
+    expectedOutput: ["998"]
