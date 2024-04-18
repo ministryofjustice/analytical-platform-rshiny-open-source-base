@@ -20,9 +20,6 @@ docker build --platform linux/amd64 --file Dockerfile --tag analytical-platform.
 docker run -it --rm \
   --platform linux/amd64 \
   --name analytical-platform-rshiny-open-source-base \
-  --env GITHUB_TOKEN="XXX" \
-  --env GITHUB_REPOSITORY="ministryofjustice/analytical-platform" \
-  --env RUNNER_LABELS="YYY"
   analytical-platform.service.justice.gov.uk/rshiny-open-source-base:local
 ```
 ## Versions
