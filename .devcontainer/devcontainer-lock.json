@@ -13,10 +13,10 @@
         "ghcr.io/devcontainers/features/docker-in-docker:2"
       ]
     },
-    "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis:0": {
-      "version": "0.0.3",
-      "resolved": "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis@sha256:81efa45affc66c168d273817f6f86a64f90715e9482eb7f6e3b33af006a2236c",
-      "integrity": "sha256:81efa45affc66c168d273817f6f86a64f90715e9482eb7f6e3b33af006a2236c"
+    "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis:1": {
+      "version": "1.0.0",
+      "resolved": "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis@sha256:e81d52725655c8ffb861605feac7ad155b447d51af65f6c3a03cab32d59f1e16",
+      "integrity": "sha256:e81d52725655c8ffb861605feac7ad155b447d51af65f6c3a03cab32d59f1e16"
     }
   }
 }
