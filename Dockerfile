@@ -5,7 +5,7 @@
 ARG r=4.4.0
 FROM rocker/r-ver:${r}
 
-ARG shinyserver=1.5.20.1002
+ARG shinyserver=1.5.22.1017
 ENV SHINY_SERVER_VERSION=${shinyserver}
 ENV PANDOC_VERSION=default
 RUN /rocker_scripts/install_shiny_server.sh
