@@ -31,6 +31,9 @@ jobs:
       - name: Scan Image
         id: scan_image
         uses: aquasecurity/trivy-action@a20de5420d57c4102486cdd9578b45609c99d7eb # v0.26.0
+        env:
+          TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db:2
+          TRIVY_JAVA_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-java-db:1
         with:
           image-ref: analytical-platform-rshiny-open-source-base
           exit-code: 1
@@ -50,6 +53,9 @@ jobs:
         if: failure() && steps.scan_image.outcome == 'failure'
         id: scan_image_on_failure
         uses: aquasecurity/trivy-action@a20de5420d57c4102486cdd9578b45609c99d7eb # v0.26.0
+        env:
+          TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db:2
+          TRIVY_JAVA_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-java-db:1
         with:
           image-ref: analytical-platform-rshiny-open-source-base
           exit-code: 1
