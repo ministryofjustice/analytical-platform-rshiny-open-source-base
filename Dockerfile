@@ -2,10 +2,9 @@
 # checkov:skip=CKV_DOCKER_3:"Ensure that a user for the container has been created"
 # hadolint global ignore=DL3008
 
-ARG r=4.4.0
-FROM rocker/r-ver:${r}
+FROM docker.io/rocker/r-ver:4.5.0@sha256:abc186e22ef825ca8dd24dca60b50bff06ffc9578908f2963558f0a8562bf451
 
-ARG shinyserver=1.5.20.1002
+ARG shinyserver=1.5.23.1030
 ENV SHINY_SERVER_VERSION=${shinyserver}
 ENV PANDOC_VERSION=default
 RUN /rocker_scripts/install_shiny_server.sh
@@ -56,6 +55,7 @@ RUN sed -i 's/createWebSocketClient(pathInfo)/createWebSocketClient(pathInfo, co
 RUN sed -i "s/'referer'/'referer', 'cookie', 'user_email'/" /opt/shiny-server/node_modules/sockjs/lib/transport.js
 
 # Shiny runs as 'shiny' user, adjust app directory permissions
+RUN userdel --force systemd-network
 RUN groupmod -g 998 shiny
 RUN usermod -u 998 -g 998 shiny
 RUN chown -R 998:998 .
