@@ -6,7 +6,6 @@
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ministryofjustice/analytical-platform-rshiny-open-source-base)
 
-
 This repository contains the RShiny Open Source Base container image for use on the Analytical Platform.
 
 ## Running Locally
