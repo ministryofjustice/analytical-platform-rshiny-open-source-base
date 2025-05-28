@@ -1,0 +1,16 @@
+---
+name: 🩻 Container Scan
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  container-scan:
+    name: Container Scan
+    permissions:
+      contents: read
+    uses: ministryofjustice/analytical-platform-github-actions/.github/workflows/reusable-container-scan.yml@828b3c86946eb2f3c551e90d7f1ee551448ae427 # v2.5.0
