@@ -1,6 +1,5 @@
 # checkov:skip=CKV_DOCKER_2:Healthcheck instructions have not been added to container images
 # checkov:skip=CKV_DOCKER_3:"Ensure that a user for the container has been created"
-# checkov:skip=CKV2_DOCKER_1: Sudo is currently needed to be updated - TODO: Remove when updated base image fixes this.
 # hadolint global ignore=DL3008
 
 FROM docker.io/rocker/r-ver:4.5.0@sha256:f97b4944221bdc309583dfbc37dc0bf2654cfbd1f330cded047aeec4ae5df7e3
@@ -40,7 +39,6 @@ RUN apt-get update -y && \
   gdal-bin \
   git \
   libssl-dev \
-  sudo \
   libsqlite3-dev \
   python3-boto \
   xtail
