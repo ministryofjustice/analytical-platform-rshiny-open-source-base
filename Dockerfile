@@ -34,10 +34,12 @@ RUN apt-get update -y && \
   libudunits2-dev \
   libgdal-dev \
   libgeos-dev \
-  libproj-dev\
+  libproj-dev \
+  linux-libc-dev \
   gdal-bin \
   git \
   libssl-dev \
+  sudo \
   libsqlite3-dev \
   python3-boto \
   xtail
