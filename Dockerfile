@@ -24,7 +24,7 @@ RUN mkdir -p /var/log/shiny-server
 
 # Ensure Python venv is installed (used by reticulate).
 RUN apt-get update -y && \
-  apt-get install -y \
+  apt-get install -y --no-install-recommends \
   python3 \
   python3-pip \
   python3-venv \
