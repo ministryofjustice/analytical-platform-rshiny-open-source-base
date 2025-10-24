@@ -6,7 +6,7 @@ FROM docker.io/rocker/r-ver:4.5.1@sha256:069e05d577c949039ba0c6b4e049240ae279612
 
 ARG shinyserver=1.5.23.1030
 ENV SHINY_SERVER_VERSION=${shinyserver}
-ENV PANDOC_VERSION=default
+ENV PANDOC_VERSION=3.8.2
 RUN /rocker_scripts/install_shiny_server.sh
 
 ENV STRINGI_DISABLE_PKG_CONFIG=true \
