@@ -13,6 +13,8 @@ updates:
     commit-message:
       prefix: ":dependabot: github-actions"
       include: "scope"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
@@ -24,6 +26,8 @@ updates:
     commit-message:
       prefix: ":dependabot: devcontainers"
       include: "scope"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
@@ -35,3 +39,5 @@ updates:
     commit-message:
       prefix: ":dependabot: docker"
       include: "scope"
+    cooldown:
+      default-days: 7
