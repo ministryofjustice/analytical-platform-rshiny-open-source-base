@@ -6,6 +6,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
     commit-message:
       prefix: ":dependabot: github-actions"
       include: "scope"
@@ -13,6 +17,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      devcontainers:
+        patterns:
+          - "*"
     commit-message:
       prefix: ":dependabot: devcontainers"
       include: "scope"
@@ -20,6 +28,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      docker:
+        patterns:
+          - "*"
     commit-message:
       prefix: ":dependabot: docker"
       include: "scope"
