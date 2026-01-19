@@ -42,3 +42,6 @@ CVE-2025-38666
 
 ## CVE-2025-68973 - Ubuntu dependency GPGV
 CVE-2025-68973
+
+## CVE-2026-23745 - (Node dependency - Tar)
+CVE-2026-23745 exp:2026-02-02
