@@ -45,3 +45,6 @@ CVE-2025-68973
 
 ## CVE-2026-23745 - (Node dependency - Tar)
 CVE-2026-23745 exp:2026-02-02
+
+## tar (package.json)
+CVE-2026-23950 exp:2026-02-04
