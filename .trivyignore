@@ -43,9 +43,13 @@ CVE-2025-38666
 ## CVE-2025-68973 - Ubuntu dependency GPGV
 CVE-2025-68973
 
-## CVE-2026-23745 - (Node dependency - Tar)
-CVE-2026-23745 exp:2026-02-14
-
-## tar (package.json)
-CVE-2026-23950 exp:2026-02-04
-CVE-2026-24842 exp:2026-02-13
+## tar (Node.js dependency in Shiny Server)
+## Transitive dependency bundled in Shiny Server's node_modules. No newer Shiny Server
+## version available (latest is 1.5.23.1030). Cannot patch independently - awaiting upstream fix.
+## Risk assessment: LOW - These CVEs (e.g., CVE-2026-23950 symlink poisoning via Unicode
+## collisions) specifically affect macOS APFS/HFS+ filesystems. Containers run on Linux
+## (ext4/overlay) where the vulnerable code path is not triggered. Additionally, users
+## don't supply tar archives to Shiny Server - the tar package is only used internally by npm.
+CVE-2026-23745 exp:2026-03-04
+CVE-2026-23950 exp:2026-03-04
+CVE-2026-24842 exp:2026-03-04
