@@ -50,6 +50,10 @@ CVE-2025-68973
 ## collisions) specifically affect macOS APFS/HFS+ filesystems. Containers run on Linux
 ## (ext4/overlay) where the vulnerable code path is not triggered. Additionally, users
 ## don't supply tar archives to Shiny Server - the tar package is only used internally by npm.
+CVE-2026-31802 exp:2026-03-19
+
+
+## CVE-2025-37849 (Use After Free in Linux kernel)
 CVE-2026-23745 exp:2026-03-20
 CVE-2026-23950 exp:2026-03-20
 CVE-2026-24842 exp:2026-03-20
@@ -72,10 +76,8 @@ CVE-2026-26996 exp:2026-03-20
 
 ## CVE-2026-27903 (minimatch (package.json))
 ## CVE-2026-27904 (minimatch (package.json))
-CVE-2026-27903 exp:2026-03-15
-CVE-2026-27904 exp:2026-03-15
+CVE-2026-27903 exp:2026-03-19
+CVE-2026-27904 exp:2026-03-19
 
 ## CVE-2026-27601 (underscore (package.json))
 CVE-2026-27601
-
-
