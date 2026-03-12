@@ -61,3 +61,32 @@ CVE-2026-31802 exp:2026-03-19
 
 ## CVE-2025-37849 (Use After Free in Linux kernel)
 ## CVE-2025-37849 exp:2026-03-09
+CVE-2026-23745 exp:2026-03-20
+CVE-2026-23950 exp:2026-03-20
+CVE-2026-24842 exp:2026-03-20
+
+## CVE-2025-38561 + CVE-2025-39698 (linux-libc-dev)
+CVE-2025-38561 exp:2026-04-09
+CVE-2025-39698 exp:2026-04-09
+CVE-2025-37899 exp:2026-03-11
+
+## CVE-2025-37849 (Use After Free in Linux kernel)
+CVE-2025-37849 exp:2026-04-09
+
+## CVE-2026-26960 (tar (package.json))
+CVE-2026-26960 exp:2026-03-20
+GHSA-qffp-2rhf-9h96 exp:2026-03-20
+CVE-2026-29786 exp:2026-04-09
+
+## CVE-2026-26996 (minimatch (package.json))
+CVE-2026-26996 exp:2026-03-20
+
+## CVE-2026-27903 (minimatch (package.json))
+## CVE-2026-27904 (minimatch (package.json))
+CVE-2026-27903 exp:2026-03-15
+CVE-2026-27904 exp:2026-03-15
+
+## CVE-2026-27601 (underscore (package.json))
+CVE-2026-27601
+
+
