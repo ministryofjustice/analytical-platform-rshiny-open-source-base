@@ -2,7 +2,7 @@
 # checkov:skip=CKV_DOCKER_3:"Ensure that a user for the container has been created"
 # hadolint global ignore=DL3008
 
-FROM docker.io/rocker/r-ver:4.5.3@sha256:9c5531fde1c8170bd459ecddde852a780007333e9b51a5f35525198ee5cea328
+FROM docker.io/rocker/r-ver:4.5.3@sha256:355c7f03d2aa42ce2b15f85505d631426e56cf52236bf1bfca1f5e1258b0e675
 
 ARG shinyserver=1.5.23.1030
 ENV SHINY_SERVER_VERSION=${shinyserver}
