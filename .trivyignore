@@ -81,3 +81,6 @@ CVE-2026-27904 exp:2026-03-19
 
 ## CVE-2026-27601 (underscore (package.json))
 CVE-2026-27601
+
+## CVE-2026-32141 (flatted (package.json))
+CVE-2026-32141 exp:2026-03-30
