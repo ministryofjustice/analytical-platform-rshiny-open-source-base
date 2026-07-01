@@ -1,27 +1,27 @@
 {
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {
-      "version": "2.12.2",
-      "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:842d2ed40827dc91b95ef727771e170b0e52272404f00dba063cee94eafac4bb",
-      "integrity": "sha256:842d2ed40827dc91b95ef727771e170b0e52272404f00dba063cee94eafac4bb"
-    },
     "ghcr.io/devcontainers/features/docker-in-docker:": {
-      "version": "2.12.3",
-      "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:c36ff66a35d1c40409a0fc1a7995616eaaa76574953b6ed675d8622e2d0bbcc5",
-      "integrity": "sha256:c36ff66a35d1c40409a0fc1a7995616eaaa76574953b6ed675d8622e2d0bbcc5"
+      "version": "4.0.0",
+      "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:4fa87399214366e320d489991769c4f3f461e1ffe461f54eea78a41b34945bb5",
+      "integrity": "sha256:4fa87399214366e320d489991769c4f3f461e1ffe461f54eea78a41b34945bb5"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "2.17.0",
+      "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:25b9f05705ffba7dbe503230ac76081419306f8c8bc88e0ce78c4ecd99a0c78c",
+      "integrity": "sha256:25b9f05705ffba7dbe503230ac76081419306f8c8bc88e0ce78c4ecd99a0c78c"
     },
     "ghcr.io/ministryofjustice/devcontainer-feature/container-structure-test:1": {
-      "version": "1.0.0",
-      "resolved": "ghcr.io/ministryofjustice/devcontainer-feature/container-structure-test@sha256:19eb30f9eb327b667be2002757d55381de87cdb5a79a6e37d293369fe8ad01ad",
-      "integrity": "sha256:19eb30f9eb327b667be2002757d55381de87cdb5a79a6e37d293369fe8ad01ad",
+      "version": "1.0.1",
+      "resolved": "ghcr.io/ministryofjustice/devcontainer-feature/container-structure-test@sha256:98cd8301fb4047c44a21d1b481ac14d7c2f94b86bbd3a7dec47bcf2f6d5b48d8",
+      "integrity": "sha256:98cd8301fb4047c44a21d1b481ac14d7c2f94b86bbd3a7dec47bcf2f6d5b48d8",
       "dependsOn": [
         "ghcr.io/devcontainers/features/docker-in-docker:2"
       ]
     },
-    "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis:1": {
-      "version": "1.0.0",
-      "resolved": "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis@sha256:e81d52725655c8ffb861605feac7ad155b447d51af65f6c3a03cab32d59f1e16",
-      "integrity": "sha256:e81d52725655c8ffb861605feac7ad155b447d51af65f6c3a03cab32d59f1e16"
+    "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis:2": {
+      "version": "2.0.0",
+      "resolved": "ghcr.io/ministryofjustice/devcontainer-feature/static-analysis@sha256:07e194be7c48e95174486c5c817f661bc6be9159272230d8460604a2ac8ec901",
+      "integrity": "sha256:07e194be7c48e95174486c5c817f661bc6be9159272230d8460604a2ac8ec901"
     }
   }
 }
