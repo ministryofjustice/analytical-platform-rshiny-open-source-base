@@ -1,0 +1,79 @@
+# ---
+# # Grype configuration for container vulnerability scanning
+# # https://github.com/anchore/grype#configuration
+
+# ignore:
+#   # linux-libc-dev (kernel headers)
+#   # These CVEs are in the Linux kernel, not in the container image filesystem.
+#   # The runtime kernel is provided and patched by the Kubernetes node host.
+#   - vulnerability: CVE-2025-38666
+#     reason: "Kernel vulnerability in linux-libc-dev headers; runtime kernel is host-managed."
+
+#   - vulnerability: CVE-2025-38561
+#     reason: "Kernel vulnerability in linux-libc-dev headers; temporary exception."
+
+#   - vulnerability: CVE-2025-39698
+#     reason: "Kernel vulnerability in linux-libc-dev headers; temporary exception."
+
+#   - vulnerability: CVE-2025-37899
+#     reason: "Kernel vulnerability in linux-libc-dev headers; temporary exception."
+
+#   - vulnerability: CVE-2025-37849
+#     reason: "Kernel vulnerability in linux-libc-dev headers; temporary exception."
+
+#   # Node.js / Shiny Server transitive dependencies
+#   - vulnerability: CVE-2024-21538
+#     reason: "Transitive dependency; tracked for upstream fix."
+
+#   - vulnerability: CVE-2025-64756
+#     reason: "Transitive dependency; tracked for upstream fix."
+
+#   - vulnerability: CVE-2024-52798
+#     reason: "Transitive dependency; tracked for upstream fix."
+
+#   - vulnerability: CVE-2025-22088
+#     reason: "Transitive dependency; tracked for upstream fix."
+
+#   - vulnerability: CVE-2025-15284
+#     reason: "qs DoS is not exploitable in this R Shiny context; query parsing is handled by R."
+
+#   # Ubuntu dependency
+#   - vulnerability: CVE-2025-68973
+#     reason: "Upstream dependency issue; tracked for upstream fix."
+
+#   # tar / minimatch / underscore / flatted transitive dependencies
+#   - vulnerability: CVE-2026-23745
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-23950
+#     reason: "Affects macOS-specific filesystem behavior; not applicable to Linux container runtime."
+
+#   - vulnerability: CVE-2026-24842
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-31802
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-26960
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: GHSA-qffp-2rhf-9h96
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-29786
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-26996
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-27903
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-27904
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-27601
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
+
+#   - vulnerability: CVE-2026-32141
+#     reason: "Bundled transitive dependency; temporary exception pending upstream updates."
