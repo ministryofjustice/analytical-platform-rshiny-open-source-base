@@ -170,3 +170,6 @@ ignore:
 
   - vulnerability: GHSA-r6q2-hw4h-h46w
     reason: "Bundled in Shiny Server/npm dependency tree; temporary exception pending upstream update."
+
+  - vulnerability: GHSA-52v5-jr5w-gjxr
+    reason: "Bundled in Shiny Server npm dependency (sigstore 2.3.1); temporary exception pending upstream update to >=4.1.1."
