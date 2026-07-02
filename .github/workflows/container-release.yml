@@ -13,6 +13,7 @@ jobs:
     name: Container Release
     permissions:
       actions: read
+      artifact-metadata: write
       attestations: write
       contents: write
       id-token: write
