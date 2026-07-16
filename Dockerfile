@@ -41,7 +41,12 @@ RUN apt-get update -y && \
   libssl-dev \
   libsqlite3-dev \
   python3-boto \
-  xtail
+  xtail \
+  libncursesw6=6.4+20240113-1ubuntu2.1 \
+  libtinfo6=6.4+20240113-1ubuntu2.1 \
+  ncurses-base=6.4+20240113-1ubuntu2.1 \
+  ncurses-bin=6.4+20240113-1ubuntu2.1 \
+  gzip=1.12-1ubuntu3.2
 
 
 # APT Cleanup
