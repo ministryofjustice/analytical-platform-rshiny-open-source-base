@@ -176,3 +176,13 @@ ignore:
 
   - vulnerability: GHSA-xv26-6w52-cph6
     reason: "Bundled in Shiny Server node_modules; temporary exception pending upstream update."
+
+  # 2026-07 Shiny Server bundled npm findings (requested time-bound suppressions)
+  - vulnerability: GHSA-23hp-3jrh-7fpw
+    reason: "Bundled in Shiny Server npm dependency tree (tar 6.2.1); temporary exception pending upstream update. Expiry: 01/08/20206."
+
+  - vulnerability: GHSA-8x88-c5mf-7j5w
+    reason: "Bundled in Shiny Server npm dependency tree (tar 6.2.1); temporary exception pending upstream update. Expiry: 01/08/20206."
+
+  - vulnerability: GHSA-3jxr-9vmj-r5cp
+    reason: "Bundled in Shiny Server npm dependency tree (brace-expansion 2.0.1); temporary exception pending upstream update. Expiry: 01/08/20206."
