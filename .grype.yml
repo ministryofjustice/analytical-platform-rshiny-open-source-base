@@ -1,4 +1,3 @@
----
 # Grype configuration for container vulnerability scanning
 # https://github.com/anchore/grype#configuration
 
@@ -107,9 +106,20 @@ ignore:
   - vulnerability: CVE-2026-42012
     reason: "Fixed upstream in newer base image package revision; temporary exception until base image ships patched package."
 
+  # Kerberos library findings (libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0)
+  # Fixed in 1.20.1-6ubuntu2.7; temporary exception until base image ships patched package.
+  - vulnerability: CVE-2026-40355
+    reason: "Fixed upstream in 1.20.1-6ubuntu2.7; temporary exception until base image ships patched package."
+
+  - vulnerability: CVE-2026-40356
+    reason: "Fixed upstream in 1.20.1-6ubuntu2.7; temporary exception until base image ships patched package."
+
   # Shiny Server bundled Node.js dependency findings
   - vulnerability: GHSA-2w6w-674q-4c4q
     reason: "Bundled in Shiny Server node_modules; no newer Shiny Server release currently available."
+
+  - vulnerability: GHSA-xv26-6w52-cph6
+    reason: "Bundled in Shiny Server node_modules; temporary exception pending upstream update."
 
   - vulnerability: GHSA-5j98-mcp5-4vw2
     reason: "Bundled in Shiny Server/npm dependency tree; temporary exception pending upstream update."
@@ -174,15 +184,12 @@ ignore:
   - vulnerability: GHSA-52v5-jr5w-gjxr
     reason: "Bundled in Shiny Server npm dependency (sigstore 2.3.1); temporary exception pending upstream update to >=4.1.1."
 
-  - vulnerability: GHSA-xv26-6w52-cph6
-    reason: "Bundled in Shiny Server node_modules; temporary exception pending upstream update."
-
   # 2026-07 Shiny Server bundled npm findings (requested time-bound suppressions)
   - vulnerability: GHSA-23hp-3jrh-7fpw
-    reason: "Bundled in Shiny Server npm dependency tree (tar 6.2.1); temporary exception pending upstream update. Expiry: 01/08/20206."
+    reason: "Bundled in Shiny Server npm dependency tree (tar 6.2.1); temporary exception pending upstream update. Expiry: 01/08/2026."
 
   - vulnerability: GHSA-8x88-c5mf-7j5w
-    reason: "Bundled in Shiny Server npm dependency tree (tar 6.2.1); temporary exception pending upstream update. Expiry: 01/08/20206."
+    reason: "Bundled in Shiny Server npm dependency tree (tar 6.2.1); temporary exception pending upstream update. Expiry: 01/08/2026."
 
   - vulnerability: GHSA-3jxr-9vmj-r5cp
-    reason: "Bundled in Shiny Server npm dependency tree (brace-expansion 2.0.1); temporary exception pending upstream update. Expiry: 01/08/20206."
+    reason: "Bundled in Shiny Server npm dependency tree (brace-expansion 2.0.1); temporary exception pending upstream update. Expiry: 01/08/2026."
