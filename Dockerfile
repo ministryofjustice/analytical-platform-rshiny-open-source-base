@@ -35,6 +35,7 @@ RUN apt-get update -y && \
   libgdal-dev \
   libgeos-dev \
   libproj-dev \
+  r-base-dev \
   linux-libc-dev \
   gdal-bin \
   git \
