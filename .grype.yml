@@ -196,3 +196,9 @@ ignore:
 
   - vulnerability: GHSA-mh99-v99m-4gvg
     reason: "Bundled in Shiny Server npm dependency tree (brace-expansion 2.0.1); temporary exception pending upstream update. Expiry: 08/08/2026."
+
+  - vulnerability: GHSA-rgw5-rvv9-x895
+    reason: "Bundled in Shiny Server npm dependency tree (brace-expansion 2.0.1); temporary exception pending upstream update."
+
+  - vulnerability: GHSA-mwp4-54f8-5fhr
+    reason: "Bundled in Shiny Server/npm dependency tree (ip-address 9.0.5); temporary exception pending upstream update to >=10.3.1."
