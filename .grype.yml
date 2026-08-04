@@ -1,5 +1,5 @@
-Grype configuration for container vulnerability scanning
-https://github.com/anchore/grype#configuration
+# Grype configuration for container vulnerability scanning
+# https://github.com/anchore/grype#configuration
 
 ignore:
   # linux-libc-dev (kernel headers)
