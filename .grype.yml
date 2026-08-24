@@ -202,3 +202,7 @@ ignore:
 
   - vulnerability: GHSA-mwp4-54f8-5fhr
     reason: "Bundled in Shiny Server/npm dependency tree (ip-address 9.0.5); temporary exception pending upstream update to >=10.3.1."
+
+  # 2026-08 Shiny Server bundled npm findings
+  - vulnerability: GHSA-r292-9mhp-454m
+    reason: "Moderate DoS in bundled npm tar (6.2.1) via uncontrolled recursion in mapHas/filesFilter on crafted long-path tar with member selection; fixed in tar 7.5.21. Not exploitable at runtime — this copy of tar is npm's internal tooling dependency (/opt/shiny-server/ext/node/lib/node_modules/npm/node_modules/tar), not invoked by Shiny Server or app code against untrusted archives. Temporary exception pending upstream Shiny Server/Node update."
