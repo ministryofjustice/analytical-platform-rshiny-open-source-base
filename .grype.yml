@@ -206,3 +206,6 @@ ignore:
   # 2026-08 Shiny Server bundled npm findings
   - vulnerability: GHSA-r292-9mhp-454m
     reason: "Moderate DoS in bundled npm tar (6.2.1) via uncontrolled recursion in mapHas/filesFilter on crafted long-path tar with member selection; fixed in tar 7.5.21. Not exploitable at runtime — this copy of tar is npm's internal tooling dependency (/opt/shiny-server/ext/node/lib/node_modules/npm/node_modules/tar), not invoked by Shiny Server or app code against untrusted archives. Temporary exception pending upstream Shiny Server/Node update."
+
+  - vulnerability: GHSA-w4pp-8pjf-rmxw
+    reason: "High severity vulnerability in bundled npm pacote (18.0.6) at /opt/shiny-server/ext/node/lib/node_modules/npm/node_modules/pacote; fixed in pacote 21.5.1. This is npm's internal tooling dependency, not invoked by Shiny Server or app code at runtime. Temporary exception pending upstream Shiny Server/Node update."
