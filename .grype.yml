@@ -209,3 +209,14 @@ ignore:
 
   - vulnerability: GHSA-w4pp-8pjf-rmxw
     reason: "High severity vulnerability in bundled npm pacote (18.0.6) at /opt/shiny-server/ext/node/lib/node_modules/npm/node_modules/pacote; fixed in pacote 21.5.1. This is npm's internal tooling dependency, not invoked by Shiny Server or app code at runtime. Temporary exception pending upstream Shiny Server/Node update."
+
+  # Transient base-image package findings from the scheduled container scan.
+  # These packages are present in the underlying image, not explicitly installed in this Dockerfile.
+  - vulnerability: CVE-2026-59850
+    reason: "Transitive base-image dependency (libssh-4 0.10.6-2ubuntu0.4); tracked for upstream fix."
+
+  - vulnerability: CVE-2026-59847
+    reason: "Transitive base-image dependency (libssh-4 0.10.6-2ubuntu0.4); tracked for upstream fix."
+
+  - vulnerability: CVE-2026-54371
+    reason: "Transitive base-image dependency (libattr1 1:2.5.2-1build1.1); tracked for upstream fix."
