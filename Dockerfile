@@ -42,10 +42,10 @@ RUN apt-get update -y && \
   libsqlite3-dev \
   python3-boto \
   xtail \
-  libncursesw6=6.4+20240113-1ubuntu2.1 \
-  libtinfo6=6.4+20240113-1ubuntu2.1 \
-  ncurses-base=6.4+20240113-1ubuntu2.1 \
-  ncurses-bin=6.4+20240113-1ubuntu2.1 \
+  libncursesw6=6.4+20240113-1ubuntu2.2 \
+  libtinfo6=6.4+20240113-1ubuntu2.2 \
+  ncurses-base=6.4+20240113-1ubuntu2.2 \
+  ncurses-bin=6.4+20240113-1ubuntu2.2\
   gzip=1.12-1ubuntu3.2 \
   libc6=2.39-0ubuntu8.9 \
   libc-bin=2.39-0ubuntu8.9 \
