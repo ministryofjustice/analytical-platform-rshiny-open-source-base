@@ -2,7 +2,7 @@
 # checkov:skip=CKV_DOCKER_3:"Ensure that a user for the container has been created"
 # hadolint global ignore=DL3008
 
-FROM docker.io/rocker/r-ver:4.6.1@sha256:a5df0ae591422cc1733e97da03a9f4eff4cf172e40895225959aa93bb7ff7517
+FROM docker.io/rocker/r-ver:4.6.1@sha256:4e6e6696ff54a86625c7f80046478e67014a2184e942b85eeff43db7b992d93e
 
 ARG shinyserver=1.5.24.1035
 ENV SHINY_SERVER_VERSION=${shinyserver}
@@ -42,10 +42,10 @@ RUN apt-get update -y && \
   libsqlite3-dev \
   python3-boto \
   xtail \
-  libncursesw6=6.4+20240113-1ubuntu2.1 \
-  libtinfo6=6.4+20240113-1ubuntu2.1 \
-  ncurses-base=6.4+20240113-1ubuntu2.1 \
-  ncurses-bin=6.4+20240113-1ubuntu2.1 \
+  libncursesw6=6.4+20240113-1ubuntu2.2 \
+  libtinfo6=6.4+20240113-1ubuntu2.2 \
+  ncurses-base=6.4+20240113-1ubuntu2.2 \
+  ncurses-bin=6.4+20240113-1ubuntu2.2 \
   gzip=1.12-1ubuntu3.2 \
   libc6=2.39-0ubuntu8.9 \
   libc-bin=2.39-0ubuntu8.9 \

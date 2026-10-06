@@ -226,3 +226,10 @@ ignore:
 
   - vulnerability: GHSA-qhr7-859c-m2p7
     reason: "Bundled in Shiny Server npm dependency tree (brace-expansion 2.0.1); temporary exception pending upstream update."
+
+  # 2026-10 Shiny Server runtime npm findings (on the request path — patch preferred)
+  - vulnerability: GHSA-jqcg-44mw-7w3h
+    reason: "Critical in Shiny Server runtime dependency proxy-addr 2.0.7 (/opt/shiny-server/node_modules/proxy-addr); fixed in 2.0.8. Runtime-reachable; short-lived exception while override patch is validated. Expiry: <date>."
+
+  - vulnerability: GHSA-vc2v-76pw-4v95
+    reason: "High in Shiny Server runtime dependency compression 1.7.4 (/opt/shiny-server/node_modules/compression); fixed in 1.8.2. Runtime-reachable; short-lived exception while override patch is validated. Expiry: <date>."
