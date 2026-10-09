@@ -233,3 +233,9 @@ ignore:
 
   - vulnerability: GHSA-vc2v-76pw-4v95
     reason: "High in Shiny Server runtime dependency compression 1.7.4 (/opt/shiny-server/node_modules/compression); fixed in 1.8.2. Runtime-reachable; short-lived exception while override patch is validated. Expiry: <date>."
+
+  - vulnerability: GHSA-8r5x-fm3f-whwj
+    reason: "Critical in Shiny Server runtime dependency handlebars 4.7.8 (/opt/shiny-server/node_modules/handlebars); fixed in 4.7.10. Runtime-reachable; short-lived exception while override patch is validated. Expiry: <date>."
+
+  - vulnerability: GHSA-p8wg-vrv2-v86f
+    reason: "Critical in Shiny Server runtime dependency handlebars 4.7.8 (/opt/shiny-server/node_modules/handlebars); fixed in 4.7.10. Runtime-reachable; short-lived exception while override patch is validated. Expiry: <date>."
