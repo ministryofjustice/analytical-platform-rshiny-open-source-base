@@ -65,6 +65,18 @@ COPY gather_env_vars.py .
 RUN sed -i 's/createWebSocketClient(pathInfo)/createWebSocketClient(pathInfo, conn.headers)/' /opt/shiny-server/lib/proxy/sockjs.js
 RUN sed -i "s/'referer'/'referer', 'cookie', 'user_email'/" /opt/shiny-server/node_modules/sockjs/lib/transport.js
 
+# Patch Shiny Server's bundled body-parser (1.20.3) to 1.20.9 to fix GHSA-27r3-jxmh-p828
+# (CVE-2026-111181): a decompression stream is left piped with no error listener, so
+# trailing bytes after a compressed request body crash the process. No dependency
+# changes are required for this upgrade, so only the package contents are replaced.
+RUN wget --no-verbose "https://registry.npmjs.org/body-parser/-/body-parser-1.20.9.tgz" -O /tmp/body-parser.tgz && \
+  echo "148488431579bbdd58f60bee16adeafed03fa93a8b267dc0851704bf2a33ca1253879381145b6ff36ec074753b45bc9cb78afe05ad7ff7da056b5637cae16c77  /tmp/body-parser.tgz" | sha512sum -c - && \
+  rm -rf /tmp/body-parser-patch && mkdir -p /tmp/body-parser-patch && \
+  tar -xzf /tmp/body-parser.tgz -C /tmp/body-parser-patch && \
+  rm -rf /opt/shiny-server/node_modules/body-parser && \
+  mv /tmp/body-parser-patch/package /opt/shiny-server/node_modules/body-parser && \
+  rm -rf /tmp/body-parser.tgz /tmp/body-parser-patch
+
 # Shiny runs as 'shiny' user, adjust app directory permissions
 RUN userdel --force systemd-network
 RUN groupmod -g 998 shiny
