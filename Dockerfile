@@ -51,7 +51,9 @@ RUN apt-get update -y && \
   libc-bin=2.39-0ubuntu8.9 \
   libc-dev-bin=2.39-0ubuntu8.9 \
   libc6-dev=2.39-0ubuntu8.9 \
-  locales=2.39-0ubuntu8.9
+  locales=2.39-0ubuntu8.9 \
+  apt=2.8.4ubuntu0.1 \
+  libapt-pkg6.0t64=2.8.4ubuntu0.1
 
 
 # APT Cleanup
