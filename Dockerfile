@@ -7,6 +7,11 @@ FROM docker.io/rocker/r-ver:4.6.1@sha256:bafb3b9a72791eeeb810f0bc0472e74c7f4939b
 ARG shinyserver=1.5.24.1035
 ENV SHINY_SERVER_VERSION=${shinyserver}
 ENV PANDOC_VERSION=3.10
+
+# Retry flaky Ubuntu mirrors instead of failing the build on one timeout
+RUN printf 'Acquire::Retries "5";\nAcquire::http::Timeout "30";\nAcquire::https::Timeout "30";\n' \
+      > /etc/apt/apt.conf.d/80-retries
+
 RUN /rocker_scripts/install_shiny_server.sh
 
 ENV STRINGI_DISABLE_PKG_CONFIG=true \
